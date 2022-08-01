@@ -1,0 +1,145 @@
+version: "3.1"
+
+stories:
+
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_question
+
+  - story: well_&_not_well path
+    steps:
+      - intent: not_well
+      - action: utter_not_well
+      - intent: well
+      - action: utter_well
+
+  - story: cold_sym path
+    steps:
+      - or:
+        - intent: cold
+        - intent: cold_sym
+      - action: utter_cold_sym
+      - intent: cold_confirm
+      - action: utter_cold_med
+      - action: utter_feedback
+      - intent: med_helped
+      - action: utter_med_helped
+      - intent: med_not_helped
+      - action: utter_med_not_helped
+      - action: utter_hospitals_near
+
+  - story: fever_sym path
+    steps:
+      - intent: fever_sym
+      - action: utter_fever_med
+      - action: utter_feedback
+      - intent: med_helped
+      - action: utter_med_helped
+      - intent: med_not_helped
+      - action: utter_med_not_helped
+      - action: utter_hospitals_near
+
+  - story: fracture_sym path
+    steps:
+      - intent: fracture_sym
+      - action: utter_fracture_sym
+      - intent: fracture_accepted
+      - action: utter_fracture_details
+      - intent: fracture_details
+      - action: utter_orthopedic_hospital_near
+
+  - story: headache path
+    steps:
+      - intent: headache
+      - action: utter_headache_type
+      - intent: migrane
+      - action: utter_migrane
+      - action: utter_hospitals_near
+      - intent: cluster_headache
+      - action: utter_cluster_headache
+      - action: utter_hospitals_near
+      - intent: tension_headache
+      - action: utter_tension_headache
+      - action: utter_hospitals_near
+
+  - story: appointment_booking path
+    steps:
+      - intent: qu_appointment
+      - action: utter_which_doctor
+      - intent: general_practitioner
+      - action: utter_general_practitioner
+      - action: utter_hospitals_near
+
+  - story: ent_appointment path
+    steps:
+      - intent: ent_specialist
+      - action: utter_ent_specialist
+      - intent: confirm_appointment
+      - action: utter_ent_appointment_confirmed
+      - intent: cancel_appointment
+      - action: utter_appointment_cancelled
+
+  - story: homeopathy_appointment path
+    steps:
+      - intent: homeopathy
+      - action: utter_homeopathy
+      - intent: confirm_appointment
+      - action: utter_homeopathy_appointment_confirmed
+      - intent: cancel_appointment
+      - action: utter_appointment_cancelled
+
+  - story: ayurveda_appointment path
+    steps:
+      - intent: ayurveda
+      - action: utter_ayurveda
+      - intent: confirm_appointment
+      - action: utter_ayurveda_appointment_confirmed
+      - intent: cancel_appointment
+      - action: utter_appointment_cancelled
+
+  - story: pediatrician_appointment path
+    steps:
+      - intent: pediatrician
+      - action: utter_pediatrician
+      - intent: confirm_appointment
+      - action: utter_pediatrician_appointment_confirmed
+      - intent: cancel_appointment
+      - action: utter_appointment_cancelled
+
+  - story: dermatologist_appointment path
+    steps:
+      - intent: dermatologist
+      - action: utter_dermatologist
+      - intent: confirm_appointment
+      - action: utter_dermatologist_appointment_confirmed
+      - intent: cancel_appointment
+      - action: utter_appointment_cancelled
+
+  - story: dentist_appointment path
+    steps:
+      - intent: dentist
+      - action: utter_dentist
+      - intent: confirm_appointment
+      - action: utter_dentist_appointment_confirmed
+      - intent: cancel_appointment
+      - action: utter_appointment_cancelled
+
+  - story: gynaecologist_appointment path
+    steps:
+      - intent: gynaecologist
+      - action: utter_gynaecologist
+      - intent: confirm_appointment
+      - action: utter_gynaecologist_appointment_confirmed
+      - intent: cancel_appointment
+      - action: utter_appointment_cancelled
+
+  - story: psychiatrist_appointment path
+    steps:
+      - intent: psychiatrist
+      - action: utter_psychiatrist
+      - intent: confirm_appointment
+      - action: utter_psychiatrist_appointment_confirmed
+      - intent: cancel_appointment
+      - action: utter_appointment_cancelled

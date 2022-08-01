@@ -1,0 +1,197 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - cold
+  - cold_sym
+  - cold_confirm
+  - med_not_helped
+  - med_helped
+  - not_well
+  - well
+  - fever_sym
+  - fracture_sym
+  - fracture_details
+  - fracture_accepted
+  - headache
+  - migrane
+  - cluster_headache
+  - tension_headache
+  - qu_appointment
+  - general_practitioner
+  - ent_specialist
+  - homeopathy
+  - ayurveda
+  - pediatrician
+  - dermatologist
+  - dentist
+  - gynaecologist
+  - psychiatrist
+  - confirm_appointment
+  - cancel_appointment
+
+actions:
+  - action_new_sym
+  - utter_greet
+  - utter_question
+  - utter_goodbye
+  - utter_iamabot
+  - utter_cold_sym
+  - utter_cold_med
+  - utter_feedback
+  - utter_med_not_helped
+  - utter_med_helped
+  - utter_not_well
+  - utter_well
+  - utter_fever_med
+  - utter_fracture_sym
+  - utter_fracture_details
+  - utter_headache_type
+  - utter_migrane
+  - utter_tension_headache
+  - utter_cluster_headache
+  - utter_hospitals_near
+  - utter_orthopedic_hospital_near
+  - utter_which_doctor
+  - utter_general_practitioner
+  - utter_ent_specialist
+  - utter_ent_appointment_confirmed
+  - utter_homeopathy
+  - utter_homeopathy_appointment_confirmed
+  - utter_ayurveda
+  - utter_ayurveda_appointment_confirmed
+  - utter_pediatrician
+  - utter_pediatrician_appointment_confirmed
+  - utter_dermatologist
+  - utter_dermatologist_appointment_confirmed
+  - utter_dentist
+  - utter_dentist_appointment_confirmed
+  - utter_gynaecologist
+  - utter_gynaecologist_appointment_confirmed
+  - utter_psychiatrist
+  - utter_psychiatrist_appointment_confirmed
+  - utter_appointment_cancelled
+
+responses:
+  utter_greet:
+    - text: "Hey! Tabib here, How can i help you."
+
+  utter_question:
+    - text: "<br>To get queries about Symptoms or to Book Appointments. Reply with Specific Keywords."
+
+  utter_goodbye:
+    - text: "Great helping You! Bye."
+
+  utter_iamabot:
+    - text: "I'm Tabib, your Virtual Healthcare Assistant."
+
+  utter_cold_sym:
+    - text: "Okay, this is a symptom of cold, do you have cold?"
+
+  utter_cold_med:
+    - text: "You should take a spoon full of benadryl after your meal."
+
+  utter_feedback:
+    - text: "<br> Let me know if you are feeling better."
+
+  utter_med_not_helped:
+    - text: "Ok, you should consult a doctor."
+
+  utter_med_helped:
+    - text: "Ok, so better to carry on medicine for 2 more days."
+
+  utter_not_well:
+    - text: "Okay, can you tell me what's wrong? what are your symptoms?"
+
+  utter_well:
+    - text: "Great to know. how can i assist you then?"
+
+  utter_fever_med:
+    - text: "This is a symptom of fever, you should take a tablet of crocin after you have your meal."
+
+  utter_fracture_sym:
+    - text: "Okay, did you get hurt, or it is a sudden aching."
+
+  utter_fracture_details:
+    - text: "Ok, is there a swelling or a physical deformity or bleeding at the aching region."
+
+  utter_headache_type:
+    - text: "What kind of headache do you have : <br>1. Migrane headache- intense throbbing pain on just 1 side of head. <br>2. Cluster headaches- severe and recurrent headaches. <br>3. Tension Headache- Ocassional."
+
+  utter_migrane:
+    - text: "Symptom noted. Migraines tend to be recurrent, and each attack may last up to 3 days otherwise consult to doctor."
+
+  utter_cluster_headache:
+    - text: "Symptom noted. Attacks tend to occur in daily clusters that can persist for weeks or months. They typically take place at the same time of day, which can often be a couple of hours after falling asleep at night. Better to consult to doctor."
+
+  utter_tension_headache:
+    - text: "Symptom noted. The cause of tension headaches is unclear, but stress, anxiety, and depression are common triggers. If it happens regularly then consult to doctor."
+
+  utter_hospitals_near:
+    - text: "<br>Click here to <a href='https://www.google.com/maps/search/hospitals+near+me/' title='Go to Hospitals Near You' target='_blank'>View Hospitals Near You</a>! <br> Or Scan the below QR Code! <br> <img src='/static/Media/QR Codes/qrcode_hospitals-near-me.png' alt='maps/search/hospitals+near+me/' style='width:160px;height:180px;'> <br> "
+
+  utter_orthopedic_hospital_near:
+    - text: "Okay, it is a common symptom of fracture, you should consult a doctor. <br>Click here to <a href='https://www.google.com/maps/search/orthopedic+hospital+near+me/' title='Go to Hospitals Near You' target='_blank'>View Orthopedic Hospitals Near You</a>! <br> Or Scan the below QR Code! <br> <img src='/static/Media/QR Codes/qrcode_orthopedic-hospital-near-me.png' alt='maps/search/orthopedic+hospitals+near+me/' style='width:160px;height:180px;'> <br> "
+
+  utter_which_doctor:
+    - text: "OK, sure will help you with it. <br>Can you specify the Speciality of doctor you want to book appointment with?"
+
+  utter_general_practitioner:
+    - text: "You may consult any medical professional in your locality."
+
+  utter_ent_specialist:
+    - text: "Here is the ENT Doctor available near you. <br>Dr. Mahesh Meda. <br>28 years experience overall. <br>Consultation fee at clinic ₹600. <br>Address: Sector 6, HSR Layout, Bangalore. <br>Phone Number: 9482252945 <br>Timings: Monday to Friday, 11:00AM to 03:00PM. <br><br>Do you want to Book the appointment? <br> Reply with confirm or cancel."
+
+  utter_ent_appointment_confirmed:
+    - text: "Great! Your appointment is confirmed with Dr. Mahesh Meda. <br>You can visit the clinic as per your convenience and this appointment is valid only for next 1 week (excluding weekends). After one week you need to reregister your appointment. <br You can download your appointment details here! <br><a href='/static/Media/Appointments/ENT-appointment.png' download='ENT Appointment Details.png'> <img src='/static/Media/Appointments/ENT-appointment.png' alt='ENT Appointment Details' width='325' height='225'> </a>"
+
+  utter_homeopathy:
+    - text: "Here is the Homeopathy Doctor available near you. <br>Dr. Radhika Bhonsle. <br>22 years experience overall. <br>Consultation fee at clinic ₹400. <br>Address: Sector 1, HSR Layout, Bangalore. <br>Phone Number: 9148882205 <br>Timings: Monday to Friday, 10:30AM to 09:00PM. <br><br>Do you want to Book the appointment? <br> Reply with confirm or cancel."
+
+  utter_homeopathy_appointment_confirmed:
+    - text: "Great! Your appointment is confirmed with Dr. Radhika Bhonsle. <br>You can visit the clinic as per your convenience and this appointment is valid only for next 1 week (excluding weekends). After one week you need to reregister your appointment. <br> You can download your appointment details here! <br><a href='/static/Media/Appointments/Homeopathy-appointmnent.png' download='Homeopathy Appointment Details.png'> <img src='/static/Media/Appointments/Homeopathy-appointmnent.png' alt='Homeopathy Appointment Details' width='325' height='225'> </a>"
+
+  utter_ayurveda:
+    - text: "Here is the Ayurvedic specialist available near you. <br>Dr. Sandhya Rani. <br>16 years experience overall. <br>Consultation fee at clinic ₹500. <br>Address: Sector 7, HSR Layout, Bangalore. <br>Phone Number: 9147258360 <br>Timings: Monday to Friday, 09:00AM to 10:00PM. <br>Do you want to Book the appointment? <br> Reply with confirm or cancel."
+
+  utter_ayurveda_appointment_confirmed:
+    - text: "Great! Your appointment is confirmed with Dr. Sandhya Rani. <br>You can visit the clinic as per your convenience and this appointment is valid only for next 1 week (excluding weekends). After one week you need to reregister your appointment. <br> You can download your appointment details here! <br><a href='/static/Media/Appointments/Ayurveda-appointment.png' download='Ayurveda Appointment Details.png'> <img src='/static/Media/Appointments/Ayurveda-appointment.png' alt='Ayurveda Appointment Details' width='325' height='225'> </a>"
+
+  utter_pediatrician:
+    - text: "Here is the Pediatrician available near you. <br>Dr. Varsha Saxena. <br>31 years experience overall. <br>Consultation fee at clinic ₹550. <br>Address: Sector 4, HSR Layout, Bangalore. <br>Phone Number: 9886442742 <br>Timings: Monday to Friday, 10:00AM to 01:30PM. <br>Do you want to Book the appointment? <br> Reply with confirm or cancel."
+
+  utter_pediatrician_appointment_confirmed:
+    - text: "Great! Your appointment is confirmed with Dr. Varsha Saxena. <br>You can visit the clinic as per your convenience and this appointment is valid only for next 1 week (excluding weekends). After one week you need to reregister your appointment. <br> You can download your appointment details here! <br><a href='/static/Media/Appointments/Pediatrician-appointment.png' download='Pediatrician Appointment Details.png'> <img src='/static/Media/Appointments/Pediatrician-appointment.png' alt='Pediatrician Appointment Details' width='325' height='225'> </a>"
+
+  utter_dermatologist:
+    - text: "Here is the Dermatologist available near you. <br>Dr. Namrata Singh. <br>9 years experience overall. <br>Consultation fee at clinic ₹600. <br>Address: Sector 7, HSR Layout, Bangalore. <br>Phone Number: 8618117511 <br>Timings: Monday to Friday, 10:00AM to 08:00PM. <br>Do you want to Book the appointment? <br> Reply with confirm or cancel."
+
+  utter_dermatologist_appointment_confirmed:
+    - text: "Great! Your appointment is confirmed with Dr. Namrata Singh. <br>You can visit the clinic as per your convenience and this appointment is valid only for next 1 week (excluding weekends). After one week you need to reregister your appointment. <br> You can download your appointment details here! <br><a href='/static/Media/Appointments/Dermatologist-appointment.png' download='Dermatologist Appointment Details.png'> <img src='/static/Media/Appointments/Dermatologist-appointment.png' alt='Dermatologist Appointment Details' width='325' height='225'> </a>"
+
+  utter_dentist:
+    - text: "Here is the Dentist available near you. <br>Dr. Bharath Shetty. <br>23 years experience overall. <br>Consultation fee at clinic ₹300. <br>Address: Sector 2, HSR Layout, Bangalore. <br>Phone Number: 9886142983 <br>Timings: Monday to Friday, 10:00AM to 07:30PM. <br>Do you want to Book the appointment? <br> Reply with confirm or cancel."
+
+  utter_dentist_appointment_confirmed:
+    - text: "Great! Your appointment is confirmed with Dr. Bharath Shetty. <br>You can visit the clinic as per your convenience and this appointment is valid only for next 1 week (excluding weekends). After one week you need to reregister your appointment. <br> You can download your appointment details here! <br><a href='/static/Media/Appointments/Dentist-appointment.png' download='Dentist Appointment Details.png'> <img src='/static/Media/Appointments/Dentist-appointment.png' alt='Dentist Appointment Details' width='325' height='225'> </a>"
+
+  utter_gynaecologist:
+    - text: "Here is the Gynaecologist available near you. <br>Dr. Rekha Prashanth. <br>28 years experience overall. <br>Consultation fee at clinic ₹600. <br>Address: Sector 6, HSR Layout, Bangalore. <br>Phone Number: 8047489446 <br>Timings: Monday to Friday, 10:00AM to 07:30PM. <br>Do you want to Book the appointment? <br> Reply with confirm or cancel."
+
+  utter_gynaecologist_appointment_confirmed:
+    - text: "Great! Your appointment is confirmed with Dr. Rekha Prashanth. <br>You can visit the clinic as per your convenience and this appointment is valid only for next 1 week (excluding weekends). After one week you need to reregister your appointment. <br> You can download your appointment details here! <br><a href='/static/Media/Appointments/Gynaecologist-appointment.png' download='Gynaecologist Appointment Details.png'> <img src='/static/Media/Appointments/Gynaecologist-appointment.png' alt='Gynaecologist Appointment Details' width='325' height='225'> </a>"
+
+  utter_psychiatrist:
+    - text: "Here is the Psychiatrist available near you. <br>Dr. Venkatesh Babu. <br>16 years experience overall. <br>Consultation fee at clinic ₹1000. <br>Address: Sector 2, HSR Layout, Bangalore. <br>Phone Number: 6366369911 <br>Timings: Monday to Friday, 10:00AM to 07:30PM. <br>Do you want to Book the appointment? <br> Reply with confirm or cancel."
+
+  utter_psychiatrist_appointment_confirmed:
+    - text: "Great! Your appointment is confirmed with Dr. Namrata Singh. <br>You can visit the clinic as per your convenience and this appointment is valid only for next 1 week (excluding weekends). After one week you need to reregister your appointment. <br> You can download your appointment details here! <br><a href='/static/Media/Appointments/Psychiatrist-appointment.png' download='Psychiatrist Appointment Details.png'> <img src='/static/Media/Appointments/Psychiatrist-appointment.png' alt='Psychiatrist Appointment Details' width='325' height='225'> </a>"
+
+  utter_appointment_cancelled:
+    - text: "Cool! Have a great day. :-) Tabib <br>Do you have any other questions? "
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
